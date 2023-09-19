@@ -62,7 +62,7 @@ public class ConcurrentExceptionFix {
         // Iterating over object elements using iterator
         Iterator<Integer> iterator = list1.iterator();
 
-        while (iterator.hasNext()) {
+        while(iterator.hasNext()) {
             Integer value = iterator.next();
 
             // If element equals certain value

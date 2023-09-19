@@ -19,7 +19,9 @@ public class CountOccurance {
 
         //Map<String, List<String>> data = Stream.of(text.split("")).collect(Collectors.groupingBy(s -> s));
 
-        Map<String, Long> data = Stream.of(text.split("")).filter(Strings::isNotBlank).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        Map<String, Long> data = Stream.of(text.split(""))
+                .filter(Strings::isNotBlank)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
         System.out.println(data);
 

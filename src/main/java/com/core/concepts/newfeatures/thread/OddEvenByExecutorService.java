@@ -16,7 +16,7 @@ public class OddEvenByExecutorService {
                     CompletableFuture<Integer> oddCompletableFuture = CompletableFuture.completedFuture(num)
                             .thenApplyAsync( val -> {
                                 if(val % 2 != 0) {
-                                    System.out.println("Thread Name :: " + Thread.currentThread().getName() + " counter :: " + val);
+                                    System.out.println("Thread Name :: " + Thread.currentThread().getName() + " Odd counter :: " + val);
                                 }
                                 return val;
                             }, executorService);
@@ -25,7 +25,7 @@ public class OddEvenByExecutorService {
                     CompletableFuture<Integer> evenCompletableFuture = CompletableFuture.completedFuture(num)
                             .thenApplyAsync( val -> {
                                 if(val % 2 == 0) {
-                                    System.out.println("Thread Name :: " + Thread.currentThread().getName() + " counter :: " + val);
+                                    System.out.println("Thread Name :: " + Thread.currentThread().getName() + " Even counter :: " + val);
                                 }
                                 return val;
                             }, executorService);

@@ -1,7 +1,6 @@
 package com.core.concepts.newfeatures.java8;
 
 import com.core.concepts.newfeatures.java8.helper.Person;
-import org.apache.logging.log4j.util.Strings;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -77,5 +76,12 @@ public class StreamSamples {
 
         List<Person> sortedPersons = personList.stream().sorted(Comparator.comparing(Person::getAge)).collect(Collectors.toList());
         System.out.println(sortedPersons);
+
+        System.out.println("========================");
+        // 10. Check Condition
+        List<Integer> val = Arrays.asList(2, 4, 6, 8, 12, 88, 100, 22);
+
+        boolean flag = val.stream().allMatch(v -> v % 2 == 0);
+        System.out.println(flag);
     }
 }

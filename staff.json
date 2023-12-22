@@ -1,0 +1,23 @@
+{
+  "name": "Sukhdev",
+  "age": 35,
+  "position": [
+    "Associate",
+    "Assistant Vice President",
+    "Vice President"
+  ],
+  "skills": [
+    "Java",
+    "SQL",
+    "Javascript",
+    "HTML",
+    "JSP/Servlet",
+    "Spring"
+  ],
+  "salary": {
+    "2009": 500000,
+    "2007": 300000,
+    "2017": 1000000,
+    "2012": 700000
+  }
+}

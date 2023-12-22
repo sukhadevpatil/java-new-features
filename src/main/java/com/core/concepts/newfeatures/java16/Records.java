@@ -12,6 +12,7 @@ public class Records {
     }
 
     public static void main(String[] args) {
-
+        Book book = new Book("Title", "author", "isbn");
+        System.out.println(book);
     }
 }

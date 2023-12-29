@@ -13,7 +13,6 @@ public class Child extends Parent {
     }
 }
 
-
 class Parent {
     public void hello() {
         System.out.println("Parent hello()...");

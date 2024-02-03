@@ -20,5 +20,8 @@ public class StringClassNewMethods {
         );
 
         System.out.println(transformed);
+
+        var test = textToTransform.transform(String::toCharArray); //transforms to array
+        System.out.println(test[4]);
     }
 }

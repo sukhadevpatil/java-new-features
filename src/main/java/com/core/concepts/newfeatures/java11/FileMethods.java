@@ -14,6 +14,7 @@ public class FileMethods {
      */
     public static void main(String[] args) throws IOException {
         String tempDir = System.getProperty("java.io.tmpdir");
+        System.out.println(tempDir);
 
         Path filePath = Files.writeString(Files.createTempFile(Path.of(tempDir), "demo", ".txt"), "Sample text");
         String fileContent = Files.readString(filePath);

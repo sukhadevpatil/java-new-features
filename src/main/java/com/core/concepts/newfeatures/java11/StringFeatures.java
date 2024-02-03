@@ -14,6 +14,6 @@ public class StringFeatures {
         System.out.println(" Subscribe ".stripTrailing());
         System.out.println(" Subscribe ".stripIndent());
 
-        System.out.println("Sukhdev".repeat(3));
+        System.out.println("Sukhdev ".repeat(3));
     }
 }

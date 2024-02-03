@@ -2,7 +2,9 @@ package com.core.concepts.newfeatures.basics.comparableComparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Comparable - useful for single field & have to implement/customization in the main object
@@ -44,5 +46,17 @@ public class TestComparable {
         Collections.sort(studentList, new IdComparator()); //if need to sort based on rollNo && name as well
         //Collections.sort(studentList, new NameComparator()); // if need to sort based on name
         System.out.println(studentList);
+
+        System.out.println("By lambda..............");
+        Comparator<Student> studentComparator = ((o1, o2) -> {
+            if(o1.getRollNo() == o2.getRollNo()) {
+                return o1.getName().compareTo(o2.getName());
+            } else if (o1.getRollNo() > o2.getRollNo()) {
+                return 1;
+            }
+            return -1;
+        });
+
+        studentList.stream().sorted(studentComparator).toList().forEach(System.out::println);
     }
 }

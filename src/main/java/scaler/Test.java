@@ -46,6 +46,7 @@ public class Test {
     }
 
     public static void main(String[] args) {
+
         int ans = fun(100, 2000);
         System.out.println(ans);
     }

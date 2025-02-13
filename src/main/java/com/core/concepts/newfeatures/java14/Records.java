@@ -11,6 +11,9 @@ public class Records {
         User user2 = user1;
         System.out.println(user1.equals(user2));
 
+        // Cannot assign or set a value to final variable 'password'
+        //user1.password = "UserTwo";
+
         System.out.println(user1);
         System.out.println(user2);
         System.out.println(user1.toString().contains("UserOne"));

@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.DoubleStream;
+import java.util.stream.Stream;
 
 import static java.util.Arrays.stream;
 
@@ -59,6 +60,13 @@ public class ArrayProcessing {
         int [] arr7 = new int [10];
         Arrays.setAll(arr7, i -> i);
         System.out.println(Arrays.toString(arr7));
+
+        System.out.println("---------------------------");
+
+        String [] arr8 = {"Easy", "Bytes"};
+        Stream<String> stream1 = Arrays.stream(arr8);
+        Stream<String[]> stream2 = stream1.map(s -> s.split(""));
+        stream2.flatMap(Arrays::stream).forEach(System.out::println);
 
     }
 }

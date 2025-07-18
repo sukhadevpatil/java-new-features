@@ -3,6 +3,7 @@ package com.core.concepts.newfeatures;
 import lombok.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -18,8 +19,16 @@ public class Test2 {
 
         //student2List.stream().distinct().forEach(System.out::println);
 
+        System.out.println("======= Grouping by name, rollNo, address ============");
         student2List.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                 .forEach((k, v) -> System.out.println(k + " : " + v));
+
+        System.out.println("======= Filtering having more than one count ============");
+        student2List.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream()
+                .filter(val -> val.getValue() > 1)
+                .map(Map.Entry::getKey)
+                .forEach(System.out::println);
     }
 }
 

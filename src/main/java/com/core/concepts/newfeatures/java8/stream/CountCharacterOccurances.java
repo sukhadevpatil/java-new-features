@@ -9,7 +9,9 @@ public class CountCharacterOccurances {
     public static void main(String[] args) {
         String str = "Hello World";
         Map<String, Long> map = Arrays.stream(str.split("")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-                //.forEach((k, v) -> System.out.println(k + " : " + v));
+        //Function.identity() & v -> v i.e. returns the same value as the input
+
+        //.forEach((k, v) -> System.out.println(k + " : " + v));
 
         map.forEach((k, v) -> System.out.println(k + " : " + v));
     }

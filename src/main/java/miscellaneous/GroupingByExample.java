@@ -10,6 +10,12 @@ import java.util.stream.Collectors;
 public class GroupingByExample {
 
     public static void main(String[] args) {
+
+        getPlayers().stream()
+                .collect(Collectors.groupingBy(Player::getTeam,
+                        Collectors.mapping(Player::getName, Collectors.toList())))
+                .entrySet().forEach(System.out::println);
+
         System.out.println("--------------------------------------------");
 
         getPlayers2().entrySet().stream()

@@ -23,6 +23,9 @@ public class CollectionToMap {
                 .toMap(Person::name, Function.identity(), (o1, o2) -> o1, HashMap::new));
 
         System.out.println(personConcurrentHashMap);
+
+        Map<String, List<Person>> data = personList.stream().collect(Collectors.groupingBy(Person::name, Collectors.toList()));
+        System.out.println(data);
     }
 
     public record Person (String name, String city) {}

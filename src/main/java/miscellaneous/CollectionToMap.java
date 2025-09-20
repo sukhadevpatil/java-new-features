@@ -24,6 +24,7 @@ public class CollectionToMap {
 
         System.out.println(personConcurrentHashMap);
 
+        //Map<String, List<Person>> data = personList.stream().collect(Collectors.groupingBy(Person::name)); -- this also works & same as below
         Map<String, List<Person>> data = personList.stream().collect(Collectors.groupingBy(Person::name, Collectors.toList()));
         System.out.println(data);
     }
